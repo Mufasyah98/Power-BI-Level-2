@@ -1,43 +1,8 @@
 https://mufasyah-my.sharepoint.com/:f:/g/personal/fakhrul_syahmi_mufasyah_onmicrosoft_com/IgAiZCyWC4CnQ6yxOcmrpTFyAfMc3GGcporGRb8_c1H2o38?e=2kxvF4
 
-Age Full =
-VAR BirthDate = DimCustomer[Joindate]
-VAR TodayDate = TODAY()
+# Submit your assessment here
 
-VAR Years =
-    YEAR(TodayDate) - YEAR(BirthDate)
-        - IF(
-            DATE(YEAR(TodayDate), MONTH(BirthDate), DAY(BirthDate)) > TodayDate,
-            1,
-            0
-        )
-
-VAR LastBirthday =
-    DATE(
-        YEAR(BirthDate) + Years,
-        MONTH(BirthDate),
-        DAY(BirthDate)
-    )
-
-VAR Months =
-    DATEDIFF(LastBirthday, TodayDate, MONTH)
-
-VAR AfterMonths =
-    EDATE(LastBirthday, Months)
-
-VAR AdjustedMonths =
-    IF(AfterMonths > TodayDate, Months - 1, Months)
-
-VAR FinalMonthDate =
-    EDATE(LastBirthday, AdjustedMonths)
-
-VAR Days =
-    DATEDIFF(FinalMonthDate, TodayDate, DAY)
-
-RETURN
-    Years & " years, " &
-    AdjustedMonths & " months, " &
-    Days & " days"
+[Submit here](https://mufasyah-my.sharepoint.com/:f:/g/personal/fakhrul_syahmi_mufasyah_onmicrosoft_com/IgCIXr67iOwERrcBv8QWQya1AcPxLkcEIaPdQ0f8-ducbNM?e=fP8F0P)
 
 # RetailMart Power BI Training Dataset
 
